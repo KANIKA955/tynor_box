@@ -1,0 +1,16 @@
+import svgwrite
+
+def create_svg_file():
+    dwg = svgwrite.Drawing("design.svg", profile="tiny", size=("200px", "200px"))
+
+    # Draw a blue rectangle
+    dwg.add(dwg.rect(insert=(10, 10), size=(180, 180), fill="blue"))
+
+    # Add some text
+    dwg.add(dwg.text("Tynor Box", insert=(50, 100), fill="white"))
+
+    # Save the SVG file
+    dwg.save()
+
+# Call the function to create the file
+create_svg_file()
