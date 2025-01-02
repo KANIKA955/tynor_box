@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Main container -->
+    <div class="max-w-7xl mx-auto p-6">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6">Dashboard</h1>
+        
+        <!-- Grid layout for dashboard cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card for Total Designs -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold text-gray-700">Total Designs</h2>
+                <p class="mt-2 text-3xl font-bold text-blue-600">{{ total_designs }}</p>
+            </div>
+            
+            <!-- Card for Total Production Tasks -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold text-gray-700">Total Production Tasks</h2>
+                <p class="mt-2 text-3xl font-bold text-green-600">{{ total_production_tasks }}</p>
+            </div>
+            
+            <!-- Card for Total CDR Records -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold text-gray-700">Total CDR Records</h2>
+                <p class="mt-2 text-3xl font-bold text-yellow-600">{{ total_cdr_records }}</p>
+            </div>
+
+            <!-- Card for Total Cost -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold text-gray-700">Total Cost</h2>
+                <p class="mt-2 text-3xl font-bold text-red-600">${{ total_cost }}</p>
+            </div>
+            
+            <!-- Card for Total Box Specifications -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold text-gray-700">Total Box Specifications</h2>
+                <p class="mt-2 text-3xl font-bold text-purple-600">{{ total_box_specs }}</p>
+            </div>
+        </div>
+
+        <!-- Optional: Add a table or graph here for further details -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Recent Designs</h2>
+            <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                <!-- Table of recent designs (you can replace this with real data) -->
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="py-2 px-4 text-left text-gray-700">Design Name</th>
+                            <th class="py-2 px-4 text-left text-gray-700">Version</th>
+                            <th class="py-2 px-4 text-left text-gray-700">Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example row -->
+                        <tr class="border-t">
+                            <td class="py-2 px-4 text-gray-700">Design A</td>
+                            <td class="py-2 px-4 text-gray-700">v1.2</td>
+                            <td class="py-2 px-4 text-gray-700">2024-12-01</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-2 px-4 text-gray-700">Design B</td>
+                            <td class="py-2 px-4 text-gray-700">v2.1</td>
+                            <td class="py-2 px-4 text-gray-700">2024-12-05</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

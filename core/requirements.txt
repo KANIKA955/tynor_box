@@ -1,0 +1,16 @@
+Django>=4.0,<5.0
+fastapi>=0.95,<1.0
+psycopg2>=2.9,<3.0
+redis>=4.0,<5.0
+boto3>=1.26,<2.0
+django-cors-headers>=3.7,<4.0
+websockets>=10.0,<11.0
+djangorestframework>=3.12,<4.0
+pandas>=1.5,<2.0
+pytest>=7.0,<8.0
+pytest-django>=4.5,<5.0
+gunicorn>=20.1,<21.0
+reportlab
+pillow
+pywin32
+chardet
